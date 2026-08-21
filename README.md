@@ -1,2 +1,3 @@
-# agenda-contatos
-Github na prática : Agenda de contatos em dupla
+# Agenda de contatos
+Aplicação em Python, feita em dupla, para cadastrar, listar, buscar e remover contatos via terminal.
+## Funcionalidades
