@@ -30,8 +30,20 @@ def listar_contatos():
 
 def buscar_contato():
     """Busca um contato pelo nome."""
-    # TODO: implementar (Pessoa B)
-    pass
+    if not contatos:
+        print("Nenhum contato cadastrado.")
+        return
+
+    nome_busca = input("Digite o nome a buscar: ")
+    encontrados = [c for c in contatos if nome_busca.lower() in c["nome"].lower()]
+
+    if not encontrados:
+        print(f"Nenhum contato encontrado com o nome '{nome_busca}'.")
+        return
+
+    print("\n--- Resultado da busca ---")
+    for contato in encontrados:
+        print(f"{contato['nome']} | {contato['telefone']} | {contato['email']}")
 
 
 def remover_contato():
