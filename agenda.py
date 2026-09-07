@@ -7,8 +7,14 @@ contatos = []
 
 def cadastrar_contato():
     """Cadastra um novo contato (nome, telefone e email)."""
-    # TODO: implementar (Pessoa A)
-    pass
+    nome = input("Nome: ")
+    telefone = input("Telefone: ")
+    email = input("Email: ")
+
+    contato = {"nome": nome, "telefone": telefone, "email": email}
+    contatos.append(contato)
+
+    print(f"Contato '{nome}' cadastrado com sucesso!")
 
 
 def listar_contatos():
