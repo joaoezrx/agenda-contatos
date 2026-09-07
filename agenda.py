@@ -48,8 +48,18 @@ def buscar_contato():
 
 def remover_contato():
     """Remove um contato."""
-    # TODO: implementar (Pessoa B)
-    pass
+    if not contatos:
+        print("Nenhum contato cadastrado.")
+        return
+
+    nome_remover = input("Digite o nome do contato a remover: ")
+    for contato in contatos:
+        if contato["nome"].lower() == nome_remover.lower():
+            contatos.remove(contato)
+            print(f"Contato '{nome_remover}' removido com sucesso!")
+            return
+
+    print(f"Nenhum contato encontrado com o nome '{nome_remover}'.")
 
 
 def exibir_menu():
